@@ -1,0 +1,116 @@
+.row .row--sm {
+  margin-right: -7.5px;
+  margin-left: -7.5px;
+}
+
+.row .row--sm > .col,
+.row .row--sm > [class*="col-"] {
+  padding-right: 7.5px;
+  padding-left: 7.5px;
+}
+
+h1.basefont, h2.basefont, h3.basefont, h4.basefont, h5.basefont, h6.basefont,
+.h1.basefont, .h2.basefont, .h3.basefont, .h4.basefont, .h5.basefont, .h6.basefont {
+  font-family: Manrope;
+}
+
+h1.before--1:before, h2.before--1:before, h3.before--1:before, h4.before--1:before, h5.before--1:before, h6.before--1:before,
+.h1.before--1:before, .h2.before--1:before, .h3.before--1:before, .h4.before--1:before, .h5.before--1:before, .h6.before--1:before {
+  content: "1. ";
+}
+
+h1.before--2:before, h2.before--2:before, h3.before--2:before, h4.before--2:before, h5.before--2:before, h6.before--2:before,
+.h1.before--2:before, .h2.before--2:before, .h3.before--2:before, .h4.before--2:before, .h5.before--2:before, .h6.before--2:before {
+  content: "2. ";
+}
+
+h1.before--3:before, h2.before--3:before, h3.before--3:before, h4.before--3:before, h5.before--3:before, h6.before--3:before,
+.h1.before--3:before, .h2.before--3:before, .h3.before--3:before, .h4.before--3:before, .h5.before--3:before, .h6.before--3:before {
+  content: "3. ";
+}
+
+.btn.btn--noshadow {
+  box-shadow: none;
+}
+
+.btn.btn--nopadding {
+  padding: 0;
+}
+
+.card.card--product {
+  border: 0;
+}
+
+.card.card--product .card-body {
+  padding: 0;
+}
+
+.card.card--product .card-body .card-title {
+  font-family: Manrope;
+}
+
+.card.card--news {
+  border: 0;
+}
+
+.card.card--news .card-body {
+  padding: 0;
+}
+
+footer h1, footer h2, footer h3, footer h4, footer h5, footer h6,
+footer .h1, footer .h2, footer .h3, footer .h4, footer .h5, footer .h6 {
+  font-family: Manrope;
+}
+
+footer form input[type="text"] {
+  background: transparent;
+  color: #fff;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  font-size: 0.8125rem;
+  height: 46px;
+}
+
+fieldset {
+  border: 1px solid #dee2e6;
+}
+
+fieldset legend {
+  background: #fff;
+  display: inline;
+  width: auto;
+  font-size: 0.8125rem;
+  padding: 0 0.5rem;
+  margin: 0 0.5rem;
+}
+
+fieldset input {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.accordion .card {
+  border-left: 0;
+  border-right: 0;
+}
+
+.accordion .card .card-header {
+  background: transparent;
+  padding-left: 0;
+  padding-right: 0;
+  border-bottom: 0;
+}
+
+.accordion .card .card-header a {
+  font-size: 0.875rem;
+  font-family: Manrope;
+  font-weight: 700;
+  color: #000;
+}
+
+.accordion .card .card-body {
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
