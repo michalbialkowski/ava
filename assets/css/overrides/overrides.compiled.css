@@ -90,6 +90,11 @@ fieldset input {
   box-shadow: none !important;
 }
 
+fieldset textarea {
+  border: none !important;
+  box-shadow: none !important;
+}
+
 .accordion .card {
   border-left: 0;
   border-right: 0;

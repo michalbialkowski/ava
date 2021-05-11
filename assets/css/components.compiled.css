@@ -82,6 +82,10 @@
   padding-bottom: calc(100% * 2 / 1);
 }
 
+.ratio.image-contain > * > img {
+  object-fit: contain;
+}
+
 @media (min-width: 576px) {
   .ratio-sm {
     display: block;
