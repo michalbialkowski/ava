@@ -1,0 +1,66 @@
+.card--product .h4 {
+  letter-spacing: 0.05em;
+}
+.card--product .card-text {
+  letter-spacing: 0.05em;
+}
+
+.product--img {
+  position: relative;
+}
+.product--img button {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.product--img button[data-favourites=active] path {
+  fill: #027063;
+}
+
+button.btn--favourites:hover path {
+  stroke: white !important;
+}
+button.btn--favourites[data-favourites=active] {
+  border-color: #027063;
+}
+button.btn--favourites[data-favourites=active]:hover {
+  background: #027063;
+}
+button.btn--favourites[data-favourites=active]:focus {
+  box-shadow: 0 0 0 0.2rem rgba(2, 112, 99, 0.5);
+}
+button.btn--favourites[data-favourites=active] path {
+  stroke: #027063;
+}
+
+header .mainmenu a span {
+  position: relative;
+  overflow: hidden;
+}
+header .mainmenu a span:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -100%;
+  width: 100%;
+  height: 1px;
+  background: black;
+}
+header #menu__twarz,
+header #menu__cialo {
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: white;
+  z-index: 1000;
+}
+header #menu__twarz .row.doublemargins,
+header #menu__cialo .row.doublemargins {
+  margin-left: -30px;
+  margin-right: -30px;
+}
+header #menu__twarz .row.doublemargins > *,
+header #menu__cialo .row.doublemargins > * {
+  padding-left: 30px;
+  padding-right: 30px;
+}

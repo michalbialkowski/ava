@@ -1,0 +1,27 @@
+.product--img {
+  position: relative;
+}
+.product--img button {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.product--img button[data-favourites=active] path {
+  fill: #027063;
+}
+
+button.btn--favourites:hover path {
+  stroke: white !important;
+}
+button.btn--favourites[data-favourites=active] {
+  border-color: #027063;
+}
+button.btn--favourites[data-favourites=active]:hover {
+  background: #027063;
+}
+button.btn--favourites[data-favourites=active]:focus {
+  box-shadow: 0 0 0 0.2rem rgba(2, 112, 99, 0.5);
+}
+button.btn--favourites[data-favourites=active] path {
+  stroke: #027063;
+}

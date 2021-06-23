@@ -1,0 +1,60 @@
+header .input-group {
+  background: #EEEEEE;
+  border-radius: 50rem;
+  overflow: hidden;
+  padding: 0.25rem;
+}
+header .input-group .input-group-prepend span {
+  background: transparent;
+  border: 0;
+}
+header .input-group .form-control {
+  border: 0;
+  background: transparent;
+  padding-left: 0;
+}
+header .input-group .form-control:focus {
+  box-shadow: none;
+}
+
+footer h2 {
+  letter-spacing: 0.05em;
+}
+footer .btn-outline-light .svg * {
+  stroke: white;
+}
+footer .btn-outline-light:hover .svg * {
+  stroke: black;
+}
+
+.flickity--banner .flickity-prev-next-button {
+  bottom: 20px !important;
+  top: auto;
+  width: 40px;
+  height: 40px;
+  opacity: 1 !important;
+  background: rgba(155, 255, 255, 0.1);
+}
+.flickity--banner .flickity-prev-next-button:focus {
+  box-shadow: none;
+}
+.flickity--banner .flickity-prev-next-button:hover {
+  background: rgba(155, 255, 255, 0.15);
+}
+.flickity--banner .flickity-prev-next-button.previous {
+  left: 40px;
+}
+.flickity--banner .flickity-prev-next-button.next {
+  left: 90px;
+  right: auto;
+}
+.flickity--banner .flickity-prev-next-button svg {
+  position: static;
+  width: 15px;
+  height: 15px;
+  left: auto;
+  top: auto;
+}
+.flickity--banner .flickity-prev-next-button svg * {
+  fill: white;
+}

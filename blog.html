@@ -6,258 +6,568 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>AVA</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Manrope:200,300,400,500,600,700,800&amp;subset=latin-ext">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700&amp;subset=latin-ext&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Manrope:200,300,400,500,600,700,800&amp;subset=latin-ext&amp;display=swap">
     <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/libs/libs.compiled.css">
+    <link rel="stylesheet" href="assets/css/core/bootstrap.compiled.css">
     <link rel="stylesheet" href="assets/css/core/bootstrap-reboot.compiled.css">
     <link rel="stylesheet" href="assets/css/core/bootstrap-grid.compiled.css">
-    <link rel="stylesheet" href="assets/css/core/bootstrap.compiled.css">
+    <link rel="stylesheet" href="assets/css/page.compiled.css">
+    <link rel="stylesheet" href="assets/css/components/components.compiled.css">
+    <link rel="stylesheet" href="assets/css/sections/sections.compiled.css">
     <link rel="stylesheet" href="assets/css/overrides/overrides.compiled.css">
-    <link rel="stylesheet" href="assets/css/components.compiled.css">
-    <link rel="stylesheet" href="assets/css/libs.compiled.css">
+    <link rel="stylesheet" href="assets/css/specials/specials.compiled.css">
 </head>
 
 <body>
     <div>
         <header>
             <div>
-                <nav class="navbar navbar-light navbar-expand-md">
-                    <div class="container-fluid"><a class="navbar-brand" href="index.html"><img class="svg" src="assets/img/logo.svg"></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-                        <div
-                            class="collapse navbar-collapse" id="navcol-1">
-                            <ul class="nav navbar-nav text-uppercase ml-auto f12 font-weight-bold">
-                                <li class="nav-item"><a class="nav-link" href="categories.html">Twarz</a></li>
-                                <li class="nav-item"><a class="nav-link" href="categories.html">Ciało</a></li>
-                                <li class="nav-item"><a class="nav-link" href="category.html">Kosmetyki profesjonalne</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#">Twój typ cery</a></li>
-                            </ul>
-                            <form class="form-inline">
-                                <div class="input-group">
-                                    <div class="input-group-prepend"><span class="input-group-text"><img class="svg" src="assets/img/icon-search.svg"></span></div><input class="form-control" type="text"></div>
-                            </form>
-                            <ul class="nav navbar-nav">
-                                <li class="nav-item"><a class="nav-link" href="#"><img class="svg" src="assets/img/icon-heart.svg"></a></li>
-                                <li class="nav-item"><a class="nav-link" href="account.html"><img class="svg" src="assets/img/icon-user.svg"></a></li>
-                                <li class="nav-item"><a class="nav-link" href="cart.html"><img class="svg" src="assets/img/icon-cart.svg"></a></li>
-                            </ul>
+                <div class="py-2">
+                    <div class="container">
+                        <div class="row justify-content-between align-items-center">
+                            <div class="col-auto hidemenus"><button class="btn d-lg-none rounded-0 p-0 mr-3" type="button" data-toggle="modal" data-target="#modal__menu"><img src="assets/img/icon-menu.svg"></button><a class="navbar-brand" href="index.html"><img class="svg" src="assets/img/logo.svg"></a></div>
+                            <div class="col-auto d-flex align-items-center">
+                                <div class="d-none d-lg-block">
+                                    <ul class="nav text-uppercase d-flex flex-row flex-nowrap f12 font-weight-bold navbar-nav mainmenu">
+                                        <li class="nav-item"><a class="nav-link text-body px-2 px-xl-3" id="trigger__twarz" href="categories.html"><span class="d-block py-1">Twarz</span></a></li>
+                                        <li class="nav-item"><a class="nav-link text-body px-2 px-xl-3" id="trigger__cialo" href="categories.html"><span class="d-block py-1">Ciało</span></a></li>
+                                        <li class="nav-item hidemenus"><a class="nav-link text-body px-2 px-xl-3" href="category.html"><span class="d-block py-1">Kosmetyki profesjonalne</span></a></li>
+                                        <li class="nav-item hidemenus"><a class="nav-link text-body px-2 px-xl-3" href="#"><span class="d-block py-1">Twój typ cery</span></a></li>
+                                    </ul>
+                                </div>
+                                <div class="d-none d-lg-block hidemenus">
+                                    <form class="mx-2">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend"><span class="input-group-text"><img class="svg" src="assets/img/icon-search.svg"></span></div><input class="form-control" type="text">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="hidemenus">
+                                    <ul class="nav d-flex flex-row flex-nowrap navbar-nav">
+                                        <li class="nav-item"><a class="nav-link px-2" href="#"><img class="svg" src="assets/img/icon-heart.svg"></a></li>
+                                        <li class="nav-item"><a class="nav-link px-2" href="account.html"><img class="svg" src="assets/img/icon-user.svg"></a></li>
+                                        <li class="nav-item"><a class="nav-link px-2" href="cart.html" data-toggle="modal" data-target="#modal__cart"><img class="svg" src="assets/img/icon-cart.svg"></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                </div>
+                <div class="position-relative">
+                    <div id="menu__twarz" class="position-absolute collapse">
+                        <div class="container py--gutter">
+                            <div class="row justify-content-between">
+                                <div class="col-auto">
+                                    <div class="row doublemargins">
+                                        <div class="col">
+                                            <h2 class="text-nowrap text-uppercase f13 font-weight-bold mb-2">Oczyszczanie</h2>
+                                            <ul class="list-unstyled f13">
+                                                <li class="text-nowrap mb-2"><a class="text-body" href="#">Demakijaż</a></li>
+                                                <li class="text-nowrap mb-2"><a class="text-body" href="#">Mycie</a></li>
+                                                <li class="text-nowrap mb-2"><a class="text-body" href="#">Peeling</a></li>
+                                                <li class="text-nowrap mb-2"><a class="text-body" href="#">Tonizacja</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col">
+                                            <h2 class="text-nowrap text-uppercase f13 font-weight-bold">Pielęgnacja &amp; Anti-aging</h2>
+                                            <ul class="list-unstyled f13">
+                                                <li class="text-nowrap mb-2"><a class="text-body" href="#">Krem na dzień</a></li>
+                                                <li class="text-nowrap mb-2"><a class="text-body" href="#">Krem na noc</a></li>
+                                                <li class="text-nowrap mb-2"><a class="text-body" href="#">Krem pod oczy</a></li>
+                                                <li class="text-nowrap mb-2"><a class="text-body" href="#">Ochrona UV</a></li>
+                                                <li class="text-nowrap mb-2"><a class="text-body" href="#">Dla mężczyzn</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col">
+                                            <h2 class="text-nowrap text-uppercase f13 font-weight-bold">Regeneracja</h2>
+                                            <ul class="list-unstyled f13 mb-4">
+                                                <li class="text-nowrap mb-2"><a class="text-body" href="#">Serum</a></li>
+                                                <li class="text-nowrap mb-2"><a class="text-body" href="#">Maska</a></li>
+                                            </ul>
+                                            <ul class="list-unstyled f13">
+                                                <li class="text-nowrap text-uppercase font-weight-bold mb-4"><a class="text-nowrap text-body" href="#">Bestsellery</a></li>
+                                                <li class="text-nowrap"><a class="text-body font-weight-bold" href="#">Zobacz wszystko</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="card card--product">
+                                                <div class="product--img mb-3">
+                                                    <div class="bg-light ratio image-contain">
+                                                        <div><img src="assets/img/Sniezna_Alga_Oczy_Bottle_PL%201.png"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-body">
+                                                    <h4 class="card-title f16 mb-2 font-weight-bold"><a class="text-body" href="product.html">Opuntica</a></h4>
+                                                    <p class="card-text f13 mb-0">krem pod oczy regenerujący</p>
+                                                    <p class="card-text f13 mb-2">30 ml</p>
+                                                    <p class="card-text font-weight-bold">129,00 zł</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="card card--product">
+                                                <div class="product--img mb-3">
+                                                    <div class="bg-light ratio image-contain">
+                                                        <div><img src="assets/img/Sniezna_Alga_Oczy_Bottle_PL%201.png"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-body">
+                                                    <h4 class="card-title f16 mb-2 font-weight-bold"><a class="text-body" href="product.html">Opuntica</a></h4>
+                                                    <p class="card-text f13 mb-0">krem pod oczy regenerujący</p>
+                                                    <p class="card-text f13 mb-2">30 ml</p>
+                                                    <p class="card-text font-weight-bold">129,00 zł</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="menu__cialo" class="position-absolute collapse">
+                        <div class="container py--gutter">
+                            <div class="row justify-content-between">
+                                <div class="col-auto">
+                                    <div class="row doublemargins">
+                                        <div class="col">
+                                            <h2 class="text-nowrap text-uppercase f13 font-weight-bold">Oczyszczanie</h2>
+                                            <ul class="list-unstyled f13">
+                                                <li class="text-nowrap mb-2"><a class="text-body" href="#">Żel</a></li>
+                                                <li class="text-nowrap mb-2"><a class="text-body" href="#">Peeling</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col">
+                                            <h2 class="text-nowrap text-uppercase f13 font-weight-bold">Pielęgnacja</h2>
+                                            <ul class="list-unstyled f13">
+                                                <li class="text-nowrap mb-2"><a class="text-body" href="#">Balsam</a></li>
+                                                <li class="text-nowrap mb-2"><a class="text-body" href="#">Olejek</a></li>
+                                                <li class="text-nowrap mb-2"><a class="text-body" href="#">Serum</a></li>
+                                                <li class="text-nowrap mb-2"><a class="text-body" href="#">Do rąk</a></li>
+                                                <li class="text-nowrap mb-2"><a class="text-body" href="#">Do stóp</a></li>
+                                                <li class="text-nowrap mb-2"><a class="text-body" href="#">Dla mężczyzn</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col">
+                                            <ul class="list-unstyled f13">
+                                                <li class="text-nowrap text-uppercase font-weight-bold mb-4"><a class="text-nowrap text-body" href="#">Bestsellery</a></li>
+                                                <li class="text-nowrap"><a class="text-body font-weight-bold" href="#">Zobacz wszystko</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="card card--product">
+                                                <div class="product--img mb-3">
+                                                    <div class="bg-light ratio image-contain">
+                                                        <div><img src="assets/img/Sniezna_Alga_Oczy_Bottle_PL%201.png"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-body">
+                                                    <h4 class="card-title f16 mb-2 font-weight-bold"><a class="text-body" href="product.html">Opuntica</a></h4>
+                                                    <p class="card-text f13 mb-0">krem pod oczy regenerujący</p>
+                                                    <p class="card-text f13 mb-2">30 ml</p>
+                                                    <p class="card-text font-weight-bold">129,00 zł</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="card card--product">
+                                                <div class="product--img mb-3">
+                                                    <div class="bg-light ratio image-contain">
+                                                        <div><img src="assets/img/Sniezna_Alga_Oczy_Bottle_PL%201.png"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-body">
+                                                    <h4 class="card-title f16 mb-2 font-weight-bold"><a class="text-body" href="product.html">Opuntica</a></h4>
+                                                    <p class="card-text f13 mb-0">krem pod oczy regenerujący</p>
+                                                    <p class="card-text f13 mb-2">30 ml</p>
+                                                    <p class="card-text font-weight-bold">129,00 zł</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            </nav>
+        </header>
+        <main>
+            <div class="f12 font-weight-bold">
+                <div class="container">
+                    <ol class="breadcrumb text-uppercase">
+                        <li class="breadcrumb-item"><a href="index.html"><span><span class="text-dark">Start</span></span></a></li>
+                        <li class="breadcrumb-item"><a href="#"><span><span class="text-dark">Produkty</span></span></a></li>
+                        <li class="breadcrumb-item"><a href="#"><span><span class="text-dark">Blog</span></span></a></li>
+                        <li class="breadcrumb-item"><a href="#"><span><span class="text-dark">Lorem ipsum dolor sit amet</span></span></a></li>
+                    </ol>
+                </div>
+            </div>
+            <div class="pb-5">
+                <div class="container-fluid p-0">
+                    <div class="row no-gutters">
+                        <div class="col-md-6">
+                            <div class="p-5">
+                                <h2 class="mb-4 h1">Blog</h2>
+                                <p>Nasz blog to pokaźna dawka wiedzy! Jeśli chcesz wiedzieć więcej na temat kosmetyków naturalnych i prawidłowej pielęgnacji skóry – jesteś w odpowiednim miejscu. Rozgość się wygodnie. Zadbaliśmy o to, by dostarczyć Ci rzetelnych informacji.<br></p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 d-flex">
+                            <div class="ratio ratio-2-1">
+                                <div><img src="assets/img/image%2031a.png"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pb-5">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-4 col-md-6 col-lg-6 col-xl-4 pt--gutter pb-5">
+                            <div class="card card--news">
+                                <div class="product--img mb-4"><a href="blog-post.html">
+                                        <div class="ratio ratio-3-2">
+                                            <div><img src="assets/img/image%2033.png"></div>
+                                        </div>
+                                    </a></div>
+                                <div class="card-body">
+                                    <h4 class="card-title h3 f22">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
+                                    <p class="card-text f14">5 min.czytania</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-6 col-lg-6 col-xl-4 pt--gutter pb-5">
+                            <div class="card card--news">
+                                <div class="product--img mb-4"><a href="blog-post.html">
+                                        <div class="ratio ratio-3-2">
+                                            <div><img src="assets/img/image%2033.png"></div>
+                                        </div>
+                                    </a></div>
+                                <div class="card-body">
+                                    <h4 class="card-title h3 f22">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
+                                    <p class="card-text f14">5 min.czytania</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-6 col-lg-6 col-xl-4 pt--gutter pb-5">
+                            <div class="card card--news">
+                                <div class="product--img mb-4"><a href="blog-post.html">
+                                        <div class="ratio ratio-3-2">
+                                            <div><img src="assets/img/image%2033.png"></div>
+                                        </div>
+                                    </a></div>
+                                <div class="card-body">
+                                    <h4 class="card-title h3 f22">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
+                                    <p class="card-text f14">5 min.czytania</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-6 col-lg-6 col-xl-4 pt--gutter pb-5">
+                            <div class="card card--news">
+                                <div class="product--img mb-4"><a href="blog-post.html">
+                                        <div class="ratio ratio-3-2">
+                                            <div><img src="assets/img/image%2033.png"></div>
+                                        </div>
+                                    </a></div>
+                                <div class="card-body">
+                                    <h4 class="card-title h3 f22">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
+                                    <p class="card-text f14">5 min.czytania</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-6 col-lg-6 col-xl-4 pt--gutter pb-5">
+                            <div class="card card--news">
+                                <div class="product--img mb-4"><a href="blog-post.html">
+                                        <div class="ratio ratio-3-2">
+                                            <div><img src="assets/img/image%2033.png"></div>
+                                        </div>
+                                    </a></div>
+                                <div class="card-body">
+                                    <h4 class="card-title h3 f22">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
+                                    <p class="card-text f14">5 min.czytania</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-6 col-lg-6 col-xl-4 pt--gutter pb-5">
+                            <div class="card card--news">
+                                <div class="product--img mb-4"><a href="blog-post.html">
+                                        <div class="ratio ratio-3-2">
+                                            <div><img src="assets/img/image%2033.png"></div>
+                                        </div>
+                                    </a></div>
+                                <div class="card-body">
+                                    <h4 class="card-title h3 f22">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
+                                    <p class="card-text f14">5 min.czytania</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-6 col-lg-6 col-xl-4 pt--gutter pb-5">
+                            <div class="card card--news">
+                                <div class="product--img mb-4"><a href="blog-post.html">
+                                        <div class="ratio ratio-3-2">
+                                            <div><img src="assets/img/image%2033.png"></div>
+                                        </div>
+                                    </a></div>
+                                <div class="card-body">
+                                    <h4 class="card-title h3 f22">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
+                                    <p class="card-text f14">5 min.czytania</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-6 col-lg-6 col-xl-4 pt--gutter pb-5">
+                            <div class="card card--news">
+                                <div class="product--img mb-4"><a href="blog-post.html">
+                                        <div class="ratio ratio-3-2">
+                                            <div><img src="assets/img/image%2033.png"></div>
+                                        </div>
+                                    </a></div>
+                                <div class="card-body">
+                                    <h4 class="card-title h3 f22">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
+                                    <p class="card-text f14">5 min.czytania</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-6 col-lg-6 col-xl-4 pt--gutter pb-5">
+                            <div class="card card--news">
+                                <div class="product--img mb-4"><a href="blog-post.html">
+                                        <div class="ratio ratio-3-2">
+                                            <div><img src="assets/img/image%2033.png"></div>
+                                        </div>
+                                    </a></div>
+                                <div class="card-body">
+                                    <h4 class="card-title h3 f22">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
+                                    <p class="card-text f14">5 min.czytania</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="text-white bg-dark">
+                <div class="pt--90 pb--85 f14">
+                    <div class="container">
+                        <div class="row justify-content-between">
+                            <div class="col-lg-6 col-xl-5 py--gutter">
+                                <h2 class="text-uppercase f12 mb-4 font-weight--700">Newsletter</h2>
+                                <p>Bądź z nami na bieżąco. Otrzymuj najnowsze informacje o trendach kosmetycznych.</p>
+                                <form>
+                                    <div class="form-row">
+                                        <div class="col d-flex">
+                                            <div class="w-100"><input class="form-control form-control-lg d-block px-0" type="text" placeholder="Adres e-mail"></div>
+                                        </div>
+                                        <div class="col-auto"><button class="btn btn-outline-light d-flex justify-content-center align-items-center btn--nopadding rounded-circle width--45 height--45" type="button"><img class="d-block svg width--18 height--11" src="assets/img/icon-arrow-right.svg"></button></div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-lg-6 col-xl-6 py--gutter">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <h2 class="text-uppercase f12 mb-4 font-weight--700">AVA Laboratorium</h2>
+                                        <ul class="list-unstyled">
+                                            <li class="mb-2"><a class="text-white" href="about.html">O nas</a></li>
+                                            <li class="mb-2"><a class="text-white" href="contact.html">Kontakt</a></li>
+                                            <li class="mb-2"><a class="text-white" href="page.html">Współpraca</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <h2 class="text-uppercase f12 mb-4 font-weight--700">Pomoc</h2>
+                                        <ul class="list-unstyled">
+                                            <li class="mb-2"><a class="text-white" href="help.html">FAQ</a></li>
+                                            <li class="mb-2"><a class="text-white" href="help.html">Formy płatności</a></li>
+                                            <li class="mb-2"><a class="text-white" href="help.html">Metody dostawy</a></li>
+                                            <li class="mb-2"><a class="text-white" href="help.html">Zwroty i reklamacje</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <h2 class="text-uppercase f12 mb-4 font-weight--700">Legal</h2>
+                                        <ul class="list-unstyled">
+                                            <li class="mb-2"><a class="text-white" href="legal.html">Polityka Prywatności</a></li>
+                                            <li class="mb-2"><a class="text-white" href="legal.html">Regulamin sklepu</a></li>
+                                            <li class="mb-2"><a class="text-white" href="legal.html">RODO</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pb-3">
+                    <div class="container">
+                        <p class="text-right mb-0 f12">Created by PROGRESSIVO © 2020. Copyright © 2020 Ava</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
-    </header>
-    <main>
-        <div class="f12 font-weight-bold">
-            <div class="container">
-                <ol class="breadcrumb text-uppercase">
-                    <li class="breadcrumb-item"><a href="index.html"><span><span class="text-dark">Start</span></span></a></li>
-                    <li class="breadcrumb-item"><a href="#"><span><span class="text-dark">Produkty</span></span></a></li>
-                    <li class="breadcrumb-item"><a href="#"><span><span class="text-dark">Blog</span></span></a></li>
-                    <li class="breadcrumb-item"><a href="#"><span><span class="text-dark">Lorem ipsum dolor sit amet</span></span></a></li>
-                </ol>
-            </div>
-        </div>
-        <div class="pb-5">
-            <div class="container-fluid p-0">
-                <div class="row no-gutters">
-                    <div class="col-md-6">
-                        <div class="p-5">
-                            <h2 class="mb-4 h1">Blog</h2>
-                            <p>Nasz blog to pokaźna dawka wiedzy! Jeśli chcesz wiedzieć więcej na temat kosmetyków naturalnych i prawidłowej pielęgnacji skóry – jesteś w odpowiednim miejscu. Rozgość się wygodnie. Zadbaliśmy o to, by dostarczyć Ci rzetelnych
-                                informacji.<br></p>
+    <div>
+        <div class="modal fade modal--fullscreen" role="dialog" tabindex="-1" id="modal__menu">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body bg-light d-flex flex-column justify-content-between py-0">
+                        <div class="py-3">
+                            <div>
+                                <ul class="nav nav-tabs d-none" role="tablist">
+                                    <li class="nav-item" role="presentation"><a class="nav-link active" role="tab" data-toggle="tab" href="#menu-tab-1">Tab 1</a></li>
+                                    <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-toggle="tab" href="#menu-tab-2">Tab 2</a></li>
+                                    <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-toggle="tab" href="#menu-tab-3">Tab 3</a></li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane active" role="tabpanel" id="menu-tab-1">
+                                        <ul class="list-unstyled mb-0">
+                                            <li class="d-flex justify-content-between align-items-center mb-2"><a class="text-body h3 f28 mb-0" href="#">Twarz</a><a class="menu--tab--link" href="#menu-tab-2"><img src="assets/img/icon-menu-arrow-right.svg"></a></li>
+                                            <li class="d-flex justify-content-between align-items-center mb-2"><a class="text-body h3 f28 mb-0" href="#">Ciało</a><a class="menu--tab--link" href="#menu-tab-2"><img src="assets/img/icon-menu-arrow-right.svg"></a></li>
+                                            <li class="d-flex justify-content-between align-items-center mb-2"><a class="text-body h3 f28 mb-0" href="#">Twój typ cery</a></li>
+                                            <li class="d-flex justify-content-between align-items-center"><a class="text-body h3 f28 mb-0" href="#">Blog</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="tab-pane" role="tabpanel" id="menu-tab-2">
+                                        <h4 class="d-flex align-items-center h2 mb-3"><a class="mr-3 menu--tab--link" href="#menu-tab-1"><img src="assets/img/icon-menu-arrow-left.svg"></a><a class="text-body" href="#">Twarz</a></h4>
+                                        <ul class="list-unstyled text-uppercase mb-0 f12">
+                                            <li class="d-flex justify-content-between align-items-center mb-2"><a class="text-body mb-0 font-weight-bold" href="#">Oczyszczanie</a><a class="menu--tab--link" href="#menu-tab-3"><img src="assets/img/icon-menu-arrow-right.svg"></a></li>
+                                            <li class="d-flex justify-content-between align-items-center mb-2"><a class="text-body mb-0 font-weight-bold" href="#">Pielęgnacja</a><a class="menu--tab--link" href="#menu-tab-3"><img src="assets/img/icon-menu-arrow-right.svg"></a></li>
+                                            <li class="d-flex justify-content-between align-items-center mb-2"><a class="text-body mb-0 font-weight-bold" href="#">Regeneracja</a><a class="menu--tab--link" href="#menu-tab-3"><img src="assets/img/icon-menu-arrow-right.svg"></a></li>
+                                            <li class="d-flex justify-content-between align-items-center mb-2"><a class="text-body mb-0 font-weight-bold" href="#">Bestsellery</a></li>
+                                            <li class="d-flex justify-content-between align-items-center mb-2"><a class="text-body mb-0 font-weight-bold" href="#">Nowości</a></li>
+                                            <li class="d-flex justify-content-between align-items-center mb-2"><a class="text-body mb-0 font-weight-bold" href="#">Zobacz wszystko</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="tab-pane" role="tabpanel" id="menu-tab-3">
+                                        <h4 class="d-flex align-items-center h2 mb-3"><a class="mr-3 menu--tab--link" href="#menu-tab-2"><img src="assets/img/icon-menu-arrow-left.svg"></a><a class="text-body" href="#">Oczyszczanie</a></h4>
+                                        <ul class="list-unstyled text-uppercase mb-0 f12">
+                                            <li class="d-flex justify-content-between align-items-center mb-2"><a class="text-body mb-0 font-weight-bold" href="#">Demakijaż</a><a href="#"><img src="assets/img/icon-menu-arrow-right.svg"></a></li>
+                                            <li class="d-flex justify-content-between align-items-center mb-2"><a class="text-body mb-0 font-weight-bold" href="#">Mycie</a><a href="#"><img src="assets/img/icon-menu-arrow-right.svg"></a></li>
+                                            <li class="d-flex justify-content-between align-items-center mb-2"><a class="text-body mb-0 font-weight-bold" href="#">Regeneracja</a><a href="#"><img src="assets/img/icon-menu-arrow-right.svg"></a></li>
+                                            <li class="d-flex justify-content-between align-items-center mb-2"><a class="text-body mb-0 font-weight-bold" href="#">Bestsellery</a></li>
+                                            <li class="d-flex justify-content-between align-items-center mb-2"><a class="text-body mb-0 font-weight-bold" href="#">Nowości</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-6 d-flex">
-                        <div class="ratio ratio-2-1">
-                            <div><img src="assets/img/image%2031a.png"></div>
+                        <div class="py-3">
+                            <ul class="list-unstyled mb-0 f12">
+                                <li class="mb-3">
+                                    <div class="d-flex justify-content-between align-items-center"><a class="text-uppercase text-dark font-weight-bold" href="#">AVA Laboratorium</a><a href="#" data-toggle="collapse" data-target="#menu__laboratorium"><img src="assets/img/icon-menu-chevron-down.svg"></a></div>
+                                    <div id="menu__laboratorium" class="collapse">
+                                        <ul class="list-unstyled mb-0">
+                                            <li class="mt-2"><a class="text-dark" href="#">O nas</a></li>
+                                            <li class="mt-2"><a class="text-dark" href="#">Kontakt</a></li>
+                                            <li class="mt-2"><a class="text-dark" href="#">Współpraca</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="mb-3">
+                                    <div class="d-flex justify-content-between align-items-center"><a class="text-uppercase text-dark font-weight-bold" href="#">Pomoc</a><a href="#" data-toggle="collapse" data-target="#menu__pomoc"><img src="assets/img/icon-menu-chevron-down.svg"></a></div>
+                                    <div id="menu__pomoc" class="collapse">
+                                        <ul class="list-unstyled mb-0">
+                                            <li class="mt-2"><a class="text-dark" href="#">FAQ</a></li>
+                                            <li class="mt-2"><a class="text-dark" href="#">Formy płatności</a></li>
+                                            <li class="mt-2"><a class="text-dark" href="#">Metody dostawy</a></li>
+                                            <li class="mt-2"><a class="text-dark" href="#">Zwroty i reklamacje</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="mb-3">
+                                    <div class="d-flex justify-content-between align-items-center"><a class="text-uppercase text-dark font-weight-bold" href="#">Legal</a><a href="#" data-toggle="collapse" data-target="#menu__legal"><img src="assets/img/icon-menu-chevron-down.svg"></a></div>
+                                    <div id="menu__legal" class="collapse">
+                                        <ul class="list-unstyled mb-0">
+                                            <li class="mt-2"><a class="text-dark" href="#">Polityka prywatności</a></li>
+                                            <li class="mt-2"><a class="text-dark" href="#">Regulamin sklepu</a></li>
+                                            <li class="mt-2"><a class="text-dark" href="#">RODO</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center py-3">
+                            <ul class="list-inline d-flex align-items-center mb-0">
+                                <li class="list-inline-item mr--25"><a class="btn p-0" role="button" href="#"><img class="width--10 height--20 svg" src="assets/img/icon-menu-facebook.svg"></a></li>
+                                <li class="list-inline-item"><a class="btn p-0" role="button" href="#"><img class="width--20 height--20 svg" src="assets/img/icon-menu-instagram.svg"></a></li>
+                            </ul>
+                            <ul class="list-inline d-flex align-items-center mb-0">
+                                <li class="list-inline-item mr-3"><a class="btn bg-white d-flex justify-content-center align-items-center p-0 width--50 height--50" role="button" href="#"><img class="width--22 height--20 svg" src="assets/img/icon-menu-envelope.svg"></a></li>
+                                <li class="list-inline-item"><a class="btn bg-white d-flex justify-content-center align-items-center p-0 width--50 height--50" role="button" href="#"><img class="width--20 height--20 svg" src="assets/img/icon-menu-percent.svg"></a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="pb-5">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-4 col-md-6 col-lg-6 col-xl-4 pt--gutter pb-5">
-                        <div class="card card--news">
-                            <div class="product--img mb-4">
-                                <div class="ratio ratio-16-9">
-                                    <div><img src="assets/img/image%2033.png"></div>
+        <div class="modal fade" role="dialog" tabindex="-1" id="modal__cart">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body bg-light d-flex flex-column py-3">
+                        <div class="d-flex align-items-center mb-3"><button class="btn btn-outline-dark btn--nopadding rounded-circle mr-3" type="button"><span class="ratio width--46 height--46"><span><span><img class="d-block" src="assets/img/icon-arrow-right.svg"></span></span></span></button>
+                            <h2 class="mb-0">Twój koszyk (2)</h2>
+                        </div>
+                        <div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="py--gutter">
+                                        <div class="row flex-nowrap">
+                                            <div class="col-auto">
+                                                <div class="bg-light ratio image-contain width--100">
+                                                    <div><img src="assets/img/Sniezna_Alga_Oczy_Bottle_PL%201.png"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col d-flex flex-column">
+                                                <div>
+                                                    <h3 class="h6 basefont font-weight-bold mb-1">Śnieżna Alga</h3>
+                                                    <p class="f13 mb-3">Kompleks przeciwzmarszczkowy pod oczy - 15 ml</p>
+                                                </div>
+                                                <div class="d-flex justify-content-between align-items-center flex-wrap">
+                                                    <div class="bg-white d-flex align-items-center rounded-pill px-3 py-1"><button class="btn rounded-0 p-0" type="button"><img src="assets/img/icon-minus-small.svg"></button><input type="text" class="border-0 mx-2 width--45 text-center" value="1"><button class="btn rounded-0 p-0" type="button"><img src="assets/img/icon-plus-small.svg"></button></div>
+                                                    <p class="text-nowrap mb-0 font-weight-bold">129,00 zł</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="card-body">
-                                <h4 class="card-title h3">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
-                                <p class="card-text f14">5 min.czytania</p>
+                        </div>
+                        <hr class="w-100 mt-0 mb-3">
+                        <div>
+                            <div class="row align-items-center">
+                                <div class="col pr-0"><input class="form-control-lg border-0 rounded-pill w-100" type="text" placeholder="Kod rabatowy"></div>
+                                <div class="col-auto"><a class="btn btn-outline-dark text-uppercase d-flex justify-content-center align-items-center font-weight-bold" role="button" href="cart.html">Zatwierdź</a></div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-4 col-md-6 col-lg-6 col-xl-4 pt--gutter pb-5">
-                        <div class="card card--news">
-                            <div class="product--img mb-4">
-                                <div class="ratio ratio-16-9">
-                                    <div><img src="assets/img/image%2033.png"></div>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <h4 class="card-title h3">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
-                                <p class="card-text f14">5 min.czytania</p>
-                            </div>
+                        <hr class="w-100">
+                        <div>
+                            <p class="d-flex justify-content-between mb-1"><span>Wartość zamówienia</span><span>208,00 zł</span></p>
+                            <p class="d-flex justify-content-between"><span>Koszty dostawy</span><span>17,00 zł</span></p>
+                            <p class="d-flex justify-content-between font-weight-bold"><span>Podsumowanie</span><span>225,00 zł</span></p>
                         </div>
-                    </div>
-                    <div class="col-4 col-md-6 col-lg-6 col-xl-4 pt--gutter pb-5">
-                        <div class="card card--news">
-                            <div class="product--img mb-4">
-                                <div class="ratio ratio-16-9">
-                                    <div><img src="assets/img/image%2033.png"></div>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <h4 class="card-title h3">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
-                                <p class="card-text f14">5 min.czytania</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4 col-md-6 col-lg-6 col-xl-4 pt--gutter pb-5">
-                        <div class="card card--news">
-                            <div class="product--img mb-4">
-                                <div class="ratio ratio-16-9">
-                                    <div><img src="assets/img/image%2033.png"></div>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <h4 class="card-title h3">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
-                                <p class="card-text f14">5 min.czytania</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4 col-md-6 col-lg-6 col-xl-4 pt--gutter pb-5">
-                        <div class="card card--news">
-                            <div class="product--img mb-4">
-                                <div class="ratio ratio-16-9">
-                                    <div><img src="assets/img/image%2033.png"></div>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <h4 class="card-title h3">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
-                                <p class="card-text f14">5 min.czytania</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4 col-md-6 col-lg-6 col-xl-4 pt--gutter pb-5">
-                        <div class="card card--news">
-                            <div class="product--img mb-4">
-                                <div class="ratio ratio-16-9">
-                                    <div><img src="assets/img/image%2033.png"></div>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <h4 class="card-title h3">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
-                                <p class="card-text f14">5 min.czytania</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4 col-md-6 col-lg-6 col-xl-4 pt--gutter pb-5">
-                        <div class="card card--news">
-                            <div class="product--img mb-4">
-                                <div class="ratio ratio-16-9">
-                                    <div><img src="assets/img/image%2033.png"></div>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <h4 class="card-title h3">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
-                                <p class="card-text f14">5 min.czytania</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4 col-md-6 col-lg-6 col-xl-4 pt--gutter pb-5">
-                        <div class="card card--news">
-                            <div class="product--img mb-4">
-                                <div class="ratio ratio-16-9">
-                                    <div><img src="assets/img/image%2033.png"></div>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <h4 class="card-title h3">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
-                                <p class="card-text f14">5 min.czytania</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4 col-md-6 col-lg-6 col-xl-4 pt--gutter pb-5">
-                        <div class="card card--news">
-                            <div class="product--img mb-4">
-                                <div class="ratio ratio-16-9">
-                                    <div><img src="assets/img/image%2033.png"></div>
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <h4 class="card-title h3">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
-                                <p class="card-text f14">5 min.czytania</p>
-                            </div>
-                        </div>
+                        <div><a class="btn btn-dark btn-block btn-sm text-uppercase d-flex justify-content-center align-items-center font-weight-bold p-3" role="button" href="cart.html">Przejdź do kasy (2)</a></div>
                     </div>
                 </div>
             </div>
         </div>
-    </main>
-    <footer>
-        <div class="text-white bg-dark py-5 f14">
-            <div class="container">
-                <div class="row justify-content-between">
-                    <div class="col-lg-6 col-xl-5 py--gutter">
-                        <h2 class="text-uppercase f12 mb-4">Newsletter</h2>
-                        <p>Bądź z nami na bieżąco. Otrzymuj najnowsze informacje o trendach kosmetycznych.</p>
-                        <form>
-                            <div class="form-row">
-                                <div class="col d-flex">
-                                    <div class="w-100"><input class="form-control form-control-lg d-block px-0" type="text" placeholder="Adres e-mail"></div>
-                                </div>
-                                <div class="col-auto"><button class="btn btn-outline-light btn--nopadding rounded-circle" type="button"><span class="ratio width--46 height--46"><span><span><img class="d-block" src="assets/img/icon-arrow-right.svg"></span></span></span></button></div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="col-lg-6 col-xl-6 py--gutter">
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <h2 class="text-uppercase f12 mb-4">AVA Laboratorium</h2>
-                                <ul class="list-unstyled">
-                                    <li class="mb-2"><a class="text-white" href="about.html">O nas</a></li>
-                                    <li class="mb-2"><a class="text-white" href="contact.html">Kontakt</a></li>
-                                    <li class="mb-2"><a class="text-white" href="page.html">Współpraca</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-sm-4">
-                                <h2 class="text-uppercase f12 mb-4">Pomoc</h2>
-                                <ul class="list-unstyled">
-                                    <li class="mb-2"><a class="text-white" href="help.html">FAQ</a></li>
-                                    <li class="mb-2"><a class="text-white" href="help.html">Formy płatności</a></li>
-                                    <li class="mb-2"><a class="text-white" href="help.html">Metody dostawy</a></li>
-                                    <li class="mb-2"><a class="text-white" href="help.html">Zwroty i reklamacje</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-sm-4">
-                                <h2 class="text-uppercase f12 mb-4">Legal</h2>
-                                <ul class="list-unstyled">
-                                    <li class="mb-2"><a class="text-white" href="legal.html">Polityka Prywatności</a></li>
-                                    <li class="mb-2"><a class="text-white" href="legal.html">Regulamin sklepu</a></li>
-                                    <li class="mb-2"><a class="text-white" href="legal.html">RODO</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
     </div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/components/svg.js"></script>
-    <script src="assets/js/components/scroll.js"></script>
-    <script src="assets/js/libs/masonry.pkgd.js"></script>
     <script src="assets/js/libs/jquery.fancybox.js"></script>
     <script src="assets/js/libs/flickity.pkgd.min.js"></script>
-    <script src="assets/js/libs/jquery.sticky.js"></script>
-    <script src="assets/js/triggers/masonry.js"></script>
     <script src="assets/js/triggers/flickity.js"></script>
+    <script src="assets/js/libs/masonry.pkgd.js"></script>
+    <script src="assets/js/triggers/masonry.js"></script>
+    <script src="assets/js/libs/jquery.sticky.js"></script>
     <script src="assets/js/triggers/sticky.js"></script>
+    <script src="assets/js/components/svg.js"></script>
+    <script src="assets/js/components/scroll.js"></script>
+    <script src="assets/js/components/menu.js"></script>
+    <script src="assets/js/components/menu-tabs.js"></script>
 </body>
 
 </html>
