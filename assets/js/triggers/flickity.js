@@ -16,7 +16,7 @@ $(window).on('load', function() {
 		contain: true,
 		freeScroll: false,
 		wrapAround: false,
-		pageDots: true,
+		pageDots: false,
 		autoPlay: false,
 		prevNextButtons: true,
 		arrowShape: { 

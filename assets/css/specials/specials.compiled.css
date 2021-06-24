@@ -1,4 +1,4 @@
-.card--product .h4 {
+.card--product .card-title {
   letter-spacing: 0.05em;
 }
 .card--product .card-text {
@@ -63,4 +63,17 @@ header #menu__twarz .row.doublemargins > *,
 header #menu__cialo .row.doublemargins > * {
   padding-left: 30px;
   padding-right: 30px;
+}
+
+#modal__cart {
+  width: 100vw;
+  max-width: 480px;
+  left: auto;
+  right: 0;
+}
+#modal__cart .iconbtn .svg * {
+  stroke: black;
+}
+#modal__cart .iconbtn:hover .svg * {
+  stroke: white;
 }

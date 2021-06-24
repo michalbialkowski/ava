@@ -451,11 +451,11 @@
                 </div>
             </div>
         </div>
-        <div class="modal fade" role="dialog" tabindex="-1" id="modal__cart">
+        <div class="modal fade modal--fullscreen right_modal" role="dialog" tabindex="-1" id="modal__cart">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-body bg-light d-flex flex-column py-3">
-                        <div class="d-flex align-items-center mb-3"><button class="btn btn-outline-dark btn--nopadding rounded-circle mr-3" type="button"><span class="ratio width--46 height--46"><span><span><img class="d-block" src="assets/img/icon-arrow-right.svg"></span></span></span></button>
+                        <div class="d-flex align-items-center mb-3"><button class="btn btn-outline-dark d-flex justify-content-center align-items-center btn--nopadding rounded-circle width--45 height--45 mr-3 p-0 min-width--45 min-height-45 iconbtn" type="button"><img class="d-block svg width--18 height--11" src="assets/img/icon-arrow-right.svg"></button>
                             <h2 class="mb-0">Twój koszyk (2)</h2>
                         </div>
                         <div>
@@ -464,18 +464,20 @@
                                     <div class="py--gutter">
                                         <div class="row flex-nowrap">
                                             <div class="col-auto">
-                                                <div class="bg-light ratio image-contain width--100">
+                                                <div class="ratio image-contain width--100">
                                                     <div><img src="assets/img/Sniezna_Alga_Oczy_Bottle_PL%201.png"></div>
                                                 </div>
                                             </div>
                                             <div class="col d-flex flex-column">
                                                 <div>
-                                                    <h3 class="h6 basefont font-weight-bold mb-1">Śnieżna Alga</h3>
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <h3 class="h6 basefont font-weight-bold mb-1 mr-3">Śnieżna Alga</h3><button class="btn rounded-0 p-0 mb-1" type="button"><img src="assets/img/icon-quiz-close.svg"></button>
+                                                    </div>
                                                     <p class="f13 mb-3">Kompleks przeciwzmarszczkowy pod oczy - 15 ml</p>
                                                 </div>
                                                 <div class="d-flex justify-content-between align-items-center flex-wrap">
-                                                    <div class="bg-white d-flex align-items-center rounded-pill px-3 py-1"><button class="btn rounded-0 p-0" type="button"><img src="assets/img/icon-minus-small.svg"></button><input type="text" class="border-0 mx-2 width--45 text-center" value="1"><button class="btn rounded-0 p-0" type="button"><img src="assets/img/icon-plus-small.svg"></button></div>
-                                                    <p class="text-nowrap mb-0 font-weight-bold">129,00 zł</p>
+                                                    <div class="bg-white d-flex align-items-center rounded-pill px-3 py-1 mb-2 mr-3"><button class="btn rounded-0 p-0" type="button"><img src="assets/img/icon-minus-small.svg"></button><input type="text" class="border-0 mx-2 width--45 text-center" value="1"><button class="btn rounded-0 p-0" type="button"><img src="assets/img/icon-plus-small.svg"></button></div>
+                                                    <p class="text-nowrap mb-0 font-weight-bold mb-2">129,00 zł</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -485,8 +487,8 @@
                         </div>
                         <hr class="w-100 mt-0 mb-3">
                         <div>
-                            <div class="row align-items-center">
-                                <div class="col pr-0"><input class="form-control-lg border-0 rounded-pill w-100" type="text" placeholder="Kod rabatowy"></div>
+                            <div class="row">
+                                <div class="col d-flex pr-0"><input type="text" class="border-0 rounded-pill w-100 px-3" placeholder="Kod rabatowy"></div>
                                 <div class="col-auto"><a class="btn btn-outline-dark text-uppercase d-flex justify-content-center align-items-center font-weight-bold" role="button" href="cart.html">Zatwierdź</a></div>
                             </div>
                         </div>
