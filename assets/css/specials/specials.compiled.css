@@ -8,13 +8,25 @@
 .product--img {
   position: relative;
 }
-.product--img button {
+.product--img > button {
   position: absolute;
   top: 0;
   right: 0;
 }
-.product--img button[data-favourites=active] path {
+.product--img > button[data-favourites=active] path {
   fill: #027063;
+}
+.product--img .button--tags {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.product--img .button--tags a, .product--img .button--tags button {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  font-weight: 700;
 }
 
 button.btn--favourites:hover path {
